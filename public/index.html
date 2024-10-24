@@ -35,6 +35,12 @@
             document.getElementById("information").innerHTML = "Username: " + response.data.username + " Password: " + response.data.password
         }
         getUserInformation();
+        function logout() {
+            localStorage.removeItem("token"); // Removes token
+            document.getElementById("information").innerText = ""; // Clears user info
+            alert("You have successfully logged out!"); // Optional: Feedback to the user
+}
+
     </script>
     <body>
         <div>
